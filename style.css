@@ -1,0 +1,144 @@
+body {
+    background-color: black;
+}
+
+/* LightBlue */
+:root {
+    --blue-color: #03F3DB;
+}
+
+/* Total area for the Drum Machine */
+#drum-machine {
+    display: block;
+    width: 570px;
+    height: 430px;
+    margin: 5% auto;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px darkslategrey;
+}
+
+/* Main area with the controls */
+#main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+#sebas {
+    color: white;
+    margin-top: 25px;
+    font-size: 12px;
+    font-weight: lighter;
+}
+
+/* Shadows OFF when Power is OFF */
+.turned-off {
+    box-shadow: none;
+}
+
+/* Mobile */
+@media (max-width: 570px) {
+    /* Main area with the controls */
+    #drum-machine {
+        width: 90vw;
+        height: auto;
+    }
+
+    #main {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* Top area */
+    #heading {
+        height: 40px;
+        margin-bottom: 15px;
+    }
+    /* Machine Display */
+    #display {
+        width: 50%;
+        height: 100%;
+    }
+    #display-text {
+        font-size: 14px;
+    }
+    h2 {
+        font-size: 12px;
+    }
+    /* Left area */
+    #switches {
+        width: 90vw;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        padding-top: 10px 
+    }   
+    
+    /* The switch - the box around the slider */
+    .switch {
+        width: 45px;
+        height: 24px;
+    }
+    
+    .slider:before {
+        height: 18px;
+        width: 18px;
+        left: 22px;
+        bottom: 0px;
+    }
+    
+    input:checked + .slider:before {
+        -webkit-transform: translateX(-22px);
+        -ms-transform: translateX(-22px);
+        transform: translateX(-22px);
+    }
+    /* Middle area */
+    #machine {
+        width: 100%;
+        height: auto;
+        grid-template-columns: 20vw 20vw 20vw;
+        grid-template-rows: 20vw 20vw 20vw;
+        grid-gap: 6px;
+        padding-left: 13vw;
+    }
+    /* Inside Letters */
+    h3 {
+        display: none;
+    }
+    
+    /* Bottom area */
+    #volume {
+        width: 19%;
+        height: 30px;
+        position: relative;
+    }
+    
+    .volume-slider {
+        transform: none;
+        position: relative;
+        top: 0px;
+        float: none;
+        right: 0px;
+        width: 100%;
+    }
+    
+    .volume-slider::-webkit-slider-thumb {
+        width: 18px;
+        height: 18px;
+    }
+
+    .volume-slider::-moz-range-thumb {
+        width: 18px;
+        height: 18px;
+    }
+
+    #sebas {
+        margin-top: 15px;
+        font-size: 10px;
+        font-weight: normal;
+    }
+}
+
+    
