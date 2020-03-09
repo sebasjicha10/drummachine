@@ -116,23 +116,7 @@ body {
     }
     
     .volume-slider {
-        transform: none;
-        position: relative;
-        top: 0px;
-        float: none;
-        right: 0px;
-        width: 100%;
-    }
-    
-    .volume-slider::-webkit-slider-thumb {
-        width: 18px;
-        height: 18px;
-    }
-
-    .volume-slider::-moz-range-thumb {
-        width: 18px;
-        height: 18px;
-    }
+        display: none;
 
     #sebas {
         margin-top: 15px;
